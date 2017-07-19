@@ -11,18 +11,26 @@ This repository contains the firmware and host python script for [building a sti
 
 ### Firmware:
 *) open the Truck_Firmware/Truck_Firmware.ino in Arduino IDE. Press "CTRL-R" to build it
+
 *) find the .hex file in correspondent Arduino folder (You can find the folder name by turnning on verbose output in Arduino IDE)
+
 *) power off the M10 board
+
 *) put a jumper to JP6 
+
 *) reconnect the USB cable. Use M10_config_gui.exe (https://github.com/PulseRain/Mustang/raw/master/synth/output_files/M10_config_gui.exe) to program the .hex file into M10 board
+
 *) Power off M10 board again remove the jumper. And put everything back together.
 
 
 ### Host Python Script:
 
 *) Turn on power of Lego Monster Truck. Make sure the blue LED on ESP8266 shield is blinking. 
+
 *) (Assume a Windows Laptop is being used.) Turn on the Wifi. look for an AP name "LEGO8266A". Password is "1234567890", or whatever configured by the firmware
+
 *) After the Wifi is connected. Open a command prompt and run the python script "ESP8266_Console.py"
+
 *) If the Wifi is not configured properly, the script will quit with a socket exception. Otherwise, it will prompt you to key in the control. Use I/J/K/M (case sensitive) for Forward/Left/Right/Back. Use space to stop. And press "ctrl-D" three times to exit the script
 
 
