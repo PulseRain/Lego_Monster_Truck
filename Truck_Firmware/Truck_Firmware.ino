@@ -158,10 +158,11 @@ void setup()
     delay(1000);
 
     //== run the following only once to setup the AP name 
-    // commandResponse(ESP8266_AP_CONFIG, ESP8266_CMD_SETUP, "\"LEGO8266A\",\"1234567890\",6,3");
-    // Serial.write(esp8266RxBuffer);
+    ESP8266.commandResponse(ESP8266_AP_CONFIG, ESP8266_CMD_SETUP, "\"LEGO8266A\",\"1234567890\",6,3");
+    Serial.write(esp8266RxBuffer);
+    delay(100);
 
- 
+    // set to AP mode
     ESP8266.commandResponse(ESP8266_WIFI_MODE, ESP8266_CMD_SETUP, "2"); 
     Serial.write(esp8266RxBuffer);
 
